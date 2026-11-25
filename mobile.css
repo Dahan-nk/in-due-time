@@ -1,0 +1,86 @@
+/* ===== HUONG DAN TUONG TAC + DIEN THOAI ===== */
+
+.hint {
+  position: absolute;
+  left: 3%;
+  bottom: 9%;
+  z-index: 20;
+  padding: 0.5vw 1.2vw;
+  border-radius: 99px;
+  background: rgba(19, 19, 61, 0.6);
+  font-family: "Chewy", cursive;
+  font-size: max(1.2vw, 11px);
+  letter-spacing: 0.05em;
+  color: #fff6a0;
+  pointer-events: none;
+  animation: hint-glow 2.4s ease-in-out infinite;
+}
+
+@keyframes hint-glow {
+  0%, 100% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.scene3.touch-light {
+  --r: 23cqw;
+}
+
+.scene3.touch-poem .poem-s3 .word {
+  animation-play-state: running;
+}
+
+.rotate-note {
+  display: none;
+}
+
+@media (orientation: portrait) and (pointer: coarse) {
+  .rotate-note {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 32px;
+    background: #13133d;
+    text-align: center;
+  }
+
+  .rotate-note img {
+    width: 90px;
+    animation: rotate-phone 2s ease-in-out infinite;
+  }
+
+  .rotate-note p {
+    font-family: "Chewy", cursive;
+    font-size: 22px;
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    color: #fff6a0;
+  }
+
+  .rotate-note p span {
+    display: block;
+    margin-top: 8px;
+    font-size: 15px;
+    opacity: 0.8;
+  }
+}
+
+@keyframes rotate-phone {
+  0%, 20% {
+    rotate: 0deg;
+  }
+  50%, 80% {
+    rotate: 90deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
